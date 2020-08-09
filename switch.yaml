@@ -1,35 +1,72 @@
-  - platform: mqtt
-    name: "Living Room Switch 1"
-    command_topic: "cmnd/sonoff_power2/power"
-    state_topic: "stat/sonoff_power2/POWER"
-    qos: 1
-    payload_on: "ON"
-    payload_off: "OFF"
-  - platform: mqtt
-    name: "Office Wall Switch"
-    command_topic: "cmnd/sonoff_power3/power"
-    state_topic: "stat/sonoff_power3/POWER"
-    qos: 1
-    payload_on: "ON"
-    payload_off: "OFF"
-  - platform: mqtt
-    name: "Living Room Wall Switch 1"
-    command_topic: "cmnd/sonoff_power4/power1"
-    state_topic: "stat/sonoff_power4/POWER1"
-    qos: 1
-    payload_on: "ON"
-    payload_off: "OFF"
-  - platform: mqtt
-    name: "Living Room Wall Switch 2"
-    command_topic: "cmnd/sonoff_power4/power2"
-    state_topic: "stat/sonoff_power4/POWER2"
-    qos: 1
-    payload_on: "ON"
-    payload_off: "OFF"
-  - platform: mqtt
-    name: "Living Room Switch 2"
-    command_topic: "cmnd/sonoff_power5/power"
-    state_topic: "stat/sonoff_power5/POWER"
-    qos: 1
-    payload_on: "ON"
-    payload_off: "OFF"
+  - platform: mqtt
+    name: "LivingRoomLeft"
+    command_topic: "cmnd/tasmota_power2/power"
+    state_topic: "stat/tasmota_power2/POWER"
+    payload_on: "ON"
+    payload_off: "OFF"
+  - platform: mqtt
+    name: "AttickPower"
+    command_topic: "cmnd/sonoff_power5/power"
+    state_topic: "stat/sonoff_power5/POWER"
+    payload_on: "ON"
+    payload_off: "OFF"
+  - platform: mqtt
+    name: "FishTankLights"
+    command_topic: "cmnd/sonoff_power6/power"
+    state_topic: "stat/sonoff_power6/POWER"
+    payload_on: "ON"
+    payload_off: "OFF"
+  - platform: mqtt
+    name: "FishTankPower"
+    command_topic: "cmnd/sonoff_power7/power"
+    state_topic: "stat/sonoff_power7/POWER"
+    payload_on: "ON"
+    payload_off: "OFF"
+  - platform: mqtt
+    name: "LaundryRoom"
+    command_topic: "cmnd/sonoff_power8/power"
+    state_topic: "stat/sonoff_power8/POWER"
+    payload_on: "ON"
+    payload_off: "OFF"
+  - platform: mqtt
+    name: "CharlotteGreenLight"
+    command_topic: "cmnd/sonoff_power10/power"
+    state_topic: "stat/sonoff_power10/POWER"
+    payload_on: "ON"
+    payload_off: "OFF"
+  - platform: mqtt
+    name: "HeidiBlueLight"
+    command_topic: "cmnd/sonoff_power11/power"
+    state_topic: "stat/sonoff_power11/POWER"
+    payload_on: "ON"
+    payload_off: "OFF"
+  - platform: mqtt
+    name: "EntryWhiteLight"
+    command_topic: "cmnd/sonoff_power12/power"
+    state_topic: "stat/sonoff_power12/POWER"
+    payload_on: "ON"
+    payload_off: "OFF"
+  - platform: mqtt
+    name: "EntryDoorLight"
+    command_topic: "cmnd/tasmota_power17/power"
+    state_topic: "stat/tasmota_power17/POWER"
+    payload_on: "ON"
+    payload_off: "OFF"
+  - platform: mqtt
+    name: "LivingRoomRight"
+    command_topic: "cmnd/tasmota_power18/power"
+    state_topic: "stat/tasmota_power18/POWER"
+    payload_on: "ON"
+    payload_off: "OFF"
+  - platform: mqtt
+    name: "FishFilter"
+    command_topic: "cmnd/fishfilter/power"
+    state_topic: "stat/fishfilter/POWER"
+    payload_on: "ON"
+    payload_off: "OFF"
+  - platform: mqtt
+    name: "FishFeeder"
+    command_topic: "cmnd/fishfeeder/power"
+    state_topic: "stat/fishfeeder/POWER"
+    payload_on: "ON"
+    payload_off: "OFF"

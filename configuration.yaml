@@ -23,3 +23,6 @@ mqtt:
   broker: localhost
   username: sub_client
   password: !secret mqtt_password
+
+switch: !include switch.yaml
+sensor: !include sensor.yaml
