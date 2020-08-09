@@ -1,8 +1,8 @@
 homeassistant:
   name: Home
-  elevation: 0
-  latitude: 22.908194
-  longitude: 44.421476
+  elevation: !secret elevation
+  latitude: !secret latitude
+  longitude: !secret longitude
   unit_system: metric
   time_zone: Europe/Berlin
 
@@ -22,4 +22,4 @@ system_health:
 mqtt:
   broker: localhost
   username: sub_client
-  password: 10293847
+  password: !secret mqtt_password
