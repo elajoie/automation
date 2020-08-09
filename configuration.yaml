@@ -22,7 +22,7 @@ system_health:
 mqtt:
   broker: localhost
   username: sub_client
-  password: !secret mqtt_password
+  password: !secret mqttpassword
 
 switch: !include switch.yaml
 sensor: !include sensor.yaml
