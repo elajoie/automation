@@ -1,0 +1,35 @@
+  - platform: mqtt
+    name: "Living Room Switch 1"
+    command_topic: "cmnd/sonoff_power2/power"
+    state_topic: "stat/sonoff_power2/POWER"
+    qos: 1
+    payload_on: "ON"
+    payload_off: "OFF"
+  - platform: mqtt
+    name: "Office Wall Switch"
+    command_topic: "cmnd/sonoff_power3/power"
+    state_topic: "stat/sonoff_power3/POWER"
+    qos: 1
+    payload_on: "ON"
+    payload_off: "OFF"
+  - platform: mqtt
+    name: "Living Room Wall Switch 1"
+    command_topic: "cmnd/sonoff_power4/power1"
+    state_topic: "stat/sonoff_power4/POWER1"
+    qos: 1
+    payload_on: "ON"
+    payload_off: "OFF"
+  - platform: mqtt
+    name: "Living Room Wall Switch 2"
+    command_topic: "cmnd/sonoff_power4/power2"
+    state_topic: "stat/sonoff_power4/POWER2"
+    qos: 1
+    payload_on: "ON"
+    payload_off: "OFF"
+  - platform: mqtt
+    name: "Living Room Switch 2"
+    command_topic: "cmnd/sonoff_power5/power"
+    state_topic: "stat/sonoff_power5/POWER"
+    qos: 1
+    payload_on: "ON"
+    payload_off: "OFF"
