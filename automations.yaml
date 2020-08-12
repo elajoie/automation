@@ -1,4 +1,4 @@
-  - id: 1
+  - id: '1'
     alias: Turn on Fishtank Light
     trigger:
     - platform: state
@@ -9,7 +9,7 @@
     - service: switch.turn_on
       entity_id: switch.fishtanklights
 
-  - id: 2
+  - id: '2'
     alias: Turn on Fishtank Light
     trigger:
     - platform: state
