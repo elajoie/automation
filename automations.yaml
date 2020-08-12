@@ -6,7 +6,8 @@
     from: below_horizon
     to: above_horizon
   action:
-  - service: switch.fishtanklights.turn_on
+  - service: switch.turn_on
+    entity_id: switch.fishtanklights
 
 - id: 2
   alias: Turn on Fishtank Light
@@ -16,4 +17,5 @@
     from: above_horizon
     to: below_horizon
   action:
-  - service: switch.fishtanklights.turn_off
+  - service: switch.turn_off
+    entity_id: switch.fishtanklights
