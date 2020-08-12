@@ -130,12 +130,12 @@
 
   - platform: mqtt
     name: "FishFilter"
-    command_topic: "fishfilter/power"
-    state_topic: "fishfilter/POWER"
+    command_topic: "cmnd/fishfilter_93/power"
+    state_topic: "stat/fishfilter_93/POWER"
     payload_on: "ON"
     payload_off: "OFF"
     value_template: "{{ value_json.POWER }}"
-    availability_topic: "fishfilter/tele/LWT"
+    availability_topic: "tele/fishfilter_93/LWT"
     payload_available: "Online"
     payload_not_available: "Offline"
     qos: 1
@@ -143,12 +143,12 @@
 
   - platform: mqtt
     name: "FishFeeder"
-    command_topic: "fishfeeder/power"
-    state_topic: "fishfeeder/POWER"
+    command_topic: "cmnd/fishfeeder_92/power"
+    state_topic: "stat/fishfeeder_92/POWER"
     payload_on: "ON"
     payload_off: "OFF"
     value_template: "{{ value_json.POWER }}"
-    availability_topic: "fishfeeder/tele/LWT"
+    availability_topic: "tele/fishfeeder_92/LWT"
     payload_available: "Online"
     payload_not_available: "Offline"
     qos: 1
