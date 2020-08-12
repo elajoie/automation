@@ -30,10 +30,16 @@
     payload_off: "OFF"
   - platform: mqtt
     name: "LaundryRoom"
-    command_topic: "cmnd/sonoff_power8/power"
-    state_topic: "stat/sonoff_power8/POWER"
+    command_topic: "sonoff_power8/cmnd/power"
+    state_topic: "sonoff_power8/stat/POWER"
     payload_on: "ON"
     payload_off: "OFF"
+    value_template: "{{ value_json.POWER }}"
+    availability_topic: "sonoff_power8/tele/STATE"
+    payload_available: "Online"
+    payload_not_available: "Offline"
+    qos: 1
+    retain: false
   - platform: mqtt
     name: "CharlotteGreenLight"
     command_topic: "cmnd/sonoff_power10/power"
