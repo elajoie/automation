@@ -4,8 +4,8 @@
     state_topic: "stat/tasmota_power2/POWER"
     payload_on: "ON"
     payload_off: "OFF"
-    value_template: "{{ value_json.POWER1 }}"
-    availability_topic: "tele/tasmota_power2/LWT"
+    value_template: "{{ value_json.POWER }}"
+    availability_topic: "tele/tasmota_power2/STATE"
     payload_available: "Online"
     payload_not_available: "Offline"
     qos: 1
