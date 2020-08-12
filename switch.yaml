@@ -5,7 +5,7 @@
     payload_on: "ON"
     payload_off: "OFF"
     value_template: "{{ value_json.POWER }}"
-    availability_topic: "tele/tasmota_power2/STATE"
+    availability_topic: "tele/tasmota_power2/LWT"
     payload_available: "Online"
     payload_not_available: "Offline"
     qos: 1
@@ -35,7 +35,7 @@
     payload_on: "ON"
     payload_off: "OFF"
     value_template: "{{ value_json.POWER }}"
-    availability_topic: "sonoff_power8/tele/SENSOR"
+    availability_topic: "sonoff_power8/tele/LWT"
     payload_available: "Online"
     payload_not_available: "Offline"
     qos: 1
