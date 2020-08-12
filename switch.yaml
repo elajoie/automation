@@ -4,6 +4,12 @@
     state_topic: "stat/tasmota_power2/POWER"
     payload_on: "ON"
     payload_off: "OFF"
+    value_template: "{{ value_json.POWER1 }}"
+    availability_topic: "tele/tasmota_power2/LWT"
+    payload_available: "Online"
+    payload_not_available: "Offline"
+    qos: 1
+    retain: false
   - platform: mqtt
     name: "AttickPower"
     command_topic: "cmnd/sonoff_power5/power"
