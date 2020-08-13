@@ -1,13 +1,6 @@
   - platform: mqtt
-    name: "Living Room Temp"
-    state_topic: "tele/sonoff_power5/SENSOR"
-    value_template: "{{value_json['AM2301'].Temperature }}"
-    qos: 0
-    unit_of_measurement: "°C"                    
-  - platform: mqtt
-    name: "Living Room Humidity"
-    state_topic: "tele/sonoff_power5/SENSOR"
-    value_template: "{{value_json['AM2301'].Humidity }}"
-    qos: 0
-    unit_of_measurement: "%"                                            
-    device_class: humidity
+    name: "Door Sensor"
+    state_topic: "cmnd/Door_Sensor/POWER2"
+    payload_on: "ON"
+    payload_off: "OFF"
+    device_class: door
