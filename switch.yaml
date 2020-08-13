@@ -104,8 +104,8 @@
 
   - platform: mqtt
     name: "EntryDoorLight"
-    command_topic: "cmnd/Door_Sensor/power"
-    state_topic: "stat/Door_Sensor/POWER"
+    command_topic: "cmnd/tasmota_power17/power"
+    state_topic: "stat/tasmota_power17/POWER"
     payload_on: "ON"
     payload_off: "OFF"
     value_template: "{{ value_json.POWER }}"
