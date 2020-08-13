@@ -26,4 +26,5 @@ mqtt:
 
 switch: !include switch.yaml
 sensor: !include sensor.yaml
+binary_sensor: !include binary_sensor.yaml
 automation: !include automations.yaml
