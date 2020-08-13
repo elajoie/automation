@@ -23,7 +23,7 @@
 - id: '3'
   alias: Feed Fish
   trigger:
-  - at: 09:00
+  - at: '09:00'
     platform: time
   - at: '17:00'
     platform: time
@@ -39,9 +39,8 @@
   - entity_id: switch.fishfilter
     service: switch.turn_on
   mode: single
-- id: '1597356144312'
+- id: '4'
   alias: Turn on Front Door Lights
-  description: ''
   trigger:
   - entity_id: binary_sensor.door_sensor
     platform: state
@@ -51,27 +50,21 @@
     entity_id: sun.sun
     state: below_horizon
   action:
-  - data: {}
-    entity_id: switch.entrydoorlight
+  - entity_id: switch.entrydoorlight
     service: switch.turn_on
-  - data: {}
-    entity_id: switch.entrywhitelight
+  - entity_id: switch.entrywhitelight
     service: switch.turn_on
   mode: single
-- id: '1597356884175'
+- id: '5'
   alias: Turn off Front Door Lights
-  description: ''
   trigger:
   - entity_id: binary_sensor.door_sensor
     platform: state
     to: 'off'
-  condition: []
   action:
   - delay: 00:00:45
-  - data: {}
-    entity_id: switch.entrydoorlight
+  - entity_id: switch.entrydoorlight
     service: switch.turn_off
-  - data: {}
-    entity_id: switch.entrywhitelight
+  - entity_id: switch.entrywhitelight
     service: switch.turn_off
   mode: single
