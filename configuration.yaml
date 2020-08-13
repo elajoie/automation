@@ -12,6 +12,10 @@ http:
   server_port: 80
 
 discovery:
+
+updater:
+  include_used_components: true
+
 conversation:
 history:
 logbook:
