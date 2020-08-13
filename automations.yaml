@@ -9,6 +9,7 @@
   - entity_id: switch.fishtanklights
     service: switch.turn_on
   mode: single
+
 - id: '2'
   alias: Turn off Fish Light
   trigger:
@@ -20,7 +21,8 @@
   - entity_id: switch.fishtanklights
     service: switch.turn_off
   mode: single
-- id: '1597336418854'
+  
+- id: '3'
   alias: Feed Fish
   description: ''
   trigger:
