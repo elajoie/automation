@@ -6,20 +6,20 @@
     state: latest
   
 - name: Clean out old Home Assistant
-  command: "virsh destroy {{ item.name }}"
+  command: "virsh destroy {{ item }}"
   with_items:
     - automation
   ignore_errors: yes
 
 - name: Clean out old Home Assistant
-  command: "virsh undefine --nvram {{ item.name }}"
+  command: "virsh undefine --nvram {{ item }}"
   with_items:
     - automation
   ignore_errors: yes
 
 - name: Remove QCOW
   file:
-    path: "/var/lib/libvirt/images/{{ item.name }}.qcow2"
+    path: "/var/lib/libvirt/images/{{ item }}.qcow2"
     state: absent
   with_items:
     - automation
@@ -27,7 +27,7 @@
 
 - name: Setup new automation server
   command: "virt-install
-    --name {{ item.name }}
+    --name {{ item }}
     --disk size=120
     --ram 4096
     --cpu host
@@ -48,6 +48,6 @@
     seconds: 120
 
 - name: Restart VMs
-  command: "virsh start {{ item.name }}"
+  command: "virsh start {{ item }}"
   with_items:
     - automation
