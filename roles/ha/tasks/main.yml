@@ -38,8 +38,6 @@
   ansible.builtin.command: python -m venv . && source bin/activate && pip3 install homeassistant colorlog
   args:
     chdir: /opt/homeassistant
-#  delegate_to: 127.0.0.1
-  run_once: true
 
 - name: Allow home assistant port
   ansible.posix.firewalld:
