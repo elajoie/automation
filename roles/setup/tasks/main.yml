@@ -40,13 +40,3 @@
     --noautoconsole"
   with_items:
     - automation
-
-# This is dirty but allows the restart of VMs after initialization - change time to fit your network speed
-- name: Pause for 120 sec
-  pause:
-    seconds: 120
-
-- name: Restart VMs
-  command: "virsh start {{ item }}"
-  with_items:
-    - automation
