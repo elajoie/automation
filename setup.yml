@@ -1,0 +1,5 @@
+---
+- hosts: netsrv
+  remote_user: root
+  roles:
+    - { role: setup }
