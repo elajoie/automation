@@ -34,7 +34,7 @@
     --vcpus 2
     --os-type linux
     --os-variant fedora33
-    --network network=auto
+    --network network=auto,portgroup='vlan-10'
     --boot uefi
     --cdrom /var/lib/libvirt/images/Fedora-Server-dvd-x86_64-33-1.2.iso
     --noautoconsole"
