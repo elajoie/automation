@@ -37,8 +37,8 @@
     --network network=auto,portgroup='vlan-10'
     --boot uefi
     --cdrom /var/lib/libvirt/images/Fedora-Server-dvd-x86_64-33-1.2.iso
-    --noautoconsole"
-    --extra-args "ip=10.0.0.2::10.0.0.1:255.255.255.0:ha.auto.lajoie.org:eth0:n"
+    --noautoconsole
+    --extra-args ip=10.0.0.2::10.0.0.1:255.255.255.0:ha.auto.lajoie.org:eth0:n"
   with_items:
     - automation
 
