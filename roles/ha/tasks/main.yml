@@ -1,0 +1,41 @@
+---
+# tasks file for ha
+- name: Install Packages
+  ansible.builtin.dnf:
+    name:
+      - python3-devel
+      - redhat-rpm-config
+    state: latest
+
+- name: Add the user 'homeassistant' with a bash shell, appending the group dialout
+  ansible.builtin.user:
+    name: homeassistant
+    shell: /bin/bash
+    groups: dialout
+    append: yes
+
+- name: Make HA working directory
+  ansible.builtin.file:
+    path: /opt/homeassistant
+    state: directory
+    mode: '0755'
+    owner: homeassistant
+    group: homeassistant
+
+- name: Setup venv for Python3
+  become: yes
+  become_user: homeassistant
+  become_method: sudo
+  become_flags: '-H -s'
+  ansible.builtin.command: python -m venv . && source bin/activate && pip3 install homeassistant colorlog
+  args:
+    chdir: /opt/homeassistant
+#  delegate_to: 127.0.0.1
+  run_once: true
+
+- name: Allow home assistant port
+  ansible.posix.firewalld:
+    port: 8123/tcp
+    permanent: yes
+    state: enabled
+    immediate: yes
