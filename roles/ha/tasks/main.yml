@@ -11,8 +11,16 @@
   ansible.builtin.user:
     name: homeassistant
     shell: /bin/bash
-    groups: dialout
+    groups: dialout,wheel
     append: yes
+
+- name: Setup password less sudo
+  lineinfile:
+    path: /etc/sudoers
+    state: present
+    regexp: '^%sudo'
+    line: '%sudo ALL=(ALL) NOPASSWD: ALL'
+    validate: 'visudo -cf %s'
 
 - name: Make HA working directory
   ansible.builtin.file:
