@@ -1,10 +1,10 @@
   - platform: mqtt
     name: "FishTankLights"
-    command_topic: "cmnd/sonoff_power8/power"
-    state_topic: "stat/sonoff_power8/POWER"
+    command_topic: "cmnd/fishtanklight/power"
+    state_topic: "stat/fishtanklight/POWER"
     payload_on: "ON"
     payload_off: "OFF"
-    availability_topic: "tele/sonoff_power8/LWT"
+    availability_topic: "tele/fishtanklight/LWT"
     payload_available: "Online"
     payload_not_available: "Offline"
     qos: 1
@@ -12,11 +12,11 @@
 
   - platform: mqtt
     name: "FishTankPower"
-    command_topic: "cmnd/sonoff_power9/power"
-    state_topic: "stat/sonoff_power9/POWER"
+    command_topic: "cmnd/fishtankpower/power"
+    state_topic: "stat/fishtankpower/POWER"
     payload_on: "ON"
     payload_off: "OFF"
-    availability_topic: "tele/sonoff_power9/LWT"
+    availability_topic: "tele/fishtankpower/LWT"
     payload_available: "Online"
     payload_not_available: "Offline"
     qos: 1
