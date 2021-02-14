@@ -36,6 +36,7 @@
   become_method: sudo
   become_flags: '-H -s'
   shell: |
+    cd /opt/homeassistant
     /usr/bin/python -m venv /opt/homeassistant/
 #    source /opt/homeassistant/bin/activate
 #    pip3 install homeassistant colorlog
