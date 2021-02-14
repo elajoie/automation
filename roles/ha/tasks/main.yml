@@ -39,7 +39,7 @@
     cd /opt/homeassistant
     /usr/bin/python -m venv /opt/homeassistant/
     source /opt/homeassistant/bin/activate
-#    /usr/bin/pip3 install homeassistant colorlog
+    /usr/bin/pip3 install homeassistant colorlog
 
 - name: Allow home assistant port
   firewalld:
