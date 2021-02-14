@@ -12,6 +12,14 @@
       - mosquitto
     state: latest
 
+- name: Create file for mosquitto passwd
+  ansible.builtin.file:
+    path: /etc/mosquitto/passwd
+    state: present
+    owner: root
+    group: root
+    mode: '0644'
+
 - name: Setup password for MQTT
   lineinfile:
     path: /etc/mosquitto/passwd
