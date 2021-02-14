@@ -37,10 +37,11 @@
   become_flags: '-H -s'
   shell:
     cmd: |
-      'cd /opt/homeassistant'
-      'python -m venv .'
-      'source bin/activate'
-      'pip3 install homeassistant colorlog'
+      cd /opt/homeassistant
+      whoami
+#      'python -m venv .'
+#      'source bin/activate'
+#      'pip3 install homeassistant colorlog'
 
 - name: Allow home assistant port
   firewalld:
