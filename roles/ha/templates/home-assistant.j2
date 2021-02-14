@@ -5,8 +5,7 @@ After=network-online.target
 [Service]
 Type=simple
 User=%i
-WorkingDirectory=/home/homeassistant/.homeassistant
-ExecStart=/opt/homeassistant/bin/hass -c "/home/homeassistant/.homeassistant"
+ExecStart=/opt/homeassistant/bin/hass -c "/opt/homeassistant/.homeassistant"
 
 
 [Install]
