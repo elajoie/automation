@@ -41,16 +41,9 @@
   become_user: homeassistant
   become_method: sudo
   become_flags: '-H -s'
-  shell: /usr/bin/python -m venv /opt/homeassistant/
-
-- name: Setup venv for Python3
-  become: yes
-  become_user: homeassistant
-  become_method: sudo
-  become_flags: '-H -s'
-  shell: . /opt/homeassistant/bin/activate && pip3 install homeassistant colorlog
-  args:
-     executable: /bin/bash
+  pip:
+    name: homeassistant,colorlog
+    virtualenv: /opt/homeassistant/
 
 - name: Allow home assistant port
   firewalld:
