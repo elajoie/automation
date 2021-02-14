@@ -6,6 +6,7 @@
       - python3-devel
       - redhat-rpm-config
       - virtualenv
+      - gcc
     state: latest
 
 - name: Add the user 'homeassistant' with a bash shell, appending the group dialout
