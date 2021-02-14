@@ -15,7 +15,7 @@
 - name: Create file for mosquitto passwd
   ansible.builtin.file:
     path: /etc/mosquitto/passwd
-    state: present
+    state: touch
     owner: root
     group: root
     mode: '0644'
