@@ -43,7 +43,7 @@
   - pip3 install homeassistant colorlog
 
 - name: Allow home assistant port
-  ansible.posix.firewalld:
+  firewalld:
     port: 8123/tcp
     permanent: yes
     state: enabled
