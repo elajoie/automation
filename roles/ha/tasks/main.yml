@@ -34,7 +34,7 @@
   become: yes
   become_user: homeassistant
   become_method: sudo
-  ansible.builtin.command: {{ item }}
+  ansible.builtin.command: "{{ item }}"
   args:
     chdir: /opt/homeassistant
   with_items:
