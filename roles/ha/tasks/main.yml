@@ -49,8 +49,9 @@
   become_method: sudo
   become_flags: '-H -s'
   shell: |
-    source /opt/homeassistant/bin/activate
-    /usr/bin/pip3 install homeassistant colorlog
+    source /opt/homeassistant/bin/activate && /usr/bin/pip3 install homeassistant colorlog
+  args:
+     executable: /bin/bash
 
 - name: Allow home assistant port
   firewalld:
