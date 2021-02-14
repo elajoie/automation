@@ -4,3 +4,18 @@
   template:
     src: configuration.yaml.j2
     dest: /opt/homeassistant/.homeassistant/configuration.yaml
+
+- name: Install Packages
+  ansible.builtin.dnf:
+    name:
+      - mosquitto
+    state: latest
+
+- name: Run command to set MQTT password for client
+  ansible.builtin.command: mosquitto_passwd -c /etc/mosquitto/passwd client "{{ mqtt_pass }}"
+
+- name: Enable ha service
+  ansible.builtin.systemd:
+    name: mosquitto.service
+    state: started
+    enabled: yes
