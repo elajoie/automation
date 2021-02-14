@@ -22,6 +22,12 @@
     line: '%sudo ALL=(ALL) NOPASSWD: ALL'
     validate: 'visudo -cf %s'
 
+- name: Delete HA working directory
+  ansible.builtin.file:
+    path: /opt/homeassistant
+    state: absent
+  ignore_errors: yes
+
 - name: Make HA working directory
   ansible.builtin.file:
     path: /opt/homeassistant
