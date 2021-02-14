@@ -13,7 +13,7 @@
     state: latest
 
 - name: Run command to set MQTT password for client
-  ansible.builtin.command: mosquitto_passwd -c /etc/mosquitto/passwd client "{{ mqtt_pass }}"
+  ansible.builtin.command: /usr/bin/mosquitto_passwd -c /etc/mosquitto/passwd client "{{ mqtt_pass }}"
 
 - name: Enable ha service
   ansible.builtin.systemd:
