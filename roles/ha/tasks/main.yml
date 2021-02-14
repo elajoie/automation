@@ -34,8 +34,7 @@
   become: yes
   become_user: homeassistant
   become_method: sudo
-  become_flags: '-H -s'
-  ansible.builtin.command: python -m venv . && source bin/activate && pip3 install homeassistant colorlog
+  ansible.builtin.command: 'python -m venv . && source bin/activate && pip3 install homeassistant colorlog'
   args:
     chdir: /opt/homeassistant
 
