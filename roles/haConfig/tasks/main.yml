@@ -49,3 +49,8 @@
     name: mosquitto.service
     state: started
     enabled: yes
+
+- name: Restart ha service
+  ansible.builtin.systemd:
+    name: home-assistant@homeassistant.service
+    state: restarted
