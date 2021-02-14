@@ -26,7 +26,6 @@
     state: present
     regexp: '^client:'
     line: 'client:$6$l2s4N6jfovuCfMey$yHPLGpGrfleUzEy8m0NPmNcUXbrnVxOImS1Lze0xaiXLx8qx0WFxFUwUjjOLCcSD4QN2Ca46sPUkVeFK26jQAw=='
-    validate: 'visudo -cf %s'
   
 - name: Enable ha service
   ansible.builtin.systemd:
