@@ -35,12 +35,10 @@
   become_user: homeassistant
   become_method: sudo
   become_flags: '-H -s'
-  shell:
-    cmd: |
-#      cd /opt/homeassistant
-      "/usr/bin/python -m venv /opt/homeassistant/"
-#      source /opt/homeassistant/bin/activate
-#      pip3 install homeassistant colorlog
+  shell: |
+    /usr/bin/python -m venv /opt/homeassistant/
+#    source /opt/homeassistant/bin/activate
+#    pip3 install homeassistant colorlog
 
 - name: Allow home assistant port
   firewalld:
