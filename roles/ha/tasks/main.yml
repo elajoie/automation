@@ -38,6 +38,15 @@
     owner: homeassistant
     group: homeassistant
 
+- name: Make HA config working directory
+  ansible.builtin.file:
+    path: /opt/homeassistant/.homeassistant
+    state: directory
+    mode: '0755'
+    owner: homeassistant
+    group: homeassistant
+
+
 - name: Setup venv for Python3
   become: yes
   become_user: homeassistant
