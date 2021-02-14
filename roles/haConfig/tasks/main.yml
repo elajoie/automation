@@ -1,10 +1,20 @@
 ---
 # tasks file for haConfig
 - include_vars: "vault"
-- name: Template for configuration.yaml
+- name: Template for configs
   template:
-    src: configuration.yaml.j2
-    dest: /opt/homeassistant/.homeassistant/configuration.yaml
+    src: "{{ item }}".j2
+    dest: "/opt/homeassistant/.homeassistant/{{ item }}"
+  with_items:
+    - configuration.yaml
+    - automations.yaml
+    - binary_sensor.yaml
+    - customize.yaml
+    - groups.yaml
+    - scenes.yaml
+    - scripts.yaml
+    - sensor.yaml
+    - switch.yaml
 
 - name: Install Packages
   ansible.builtin.dnf:
