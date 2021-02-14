@@ -1,71 +1,14 @@
+{% for m in mqtt %}
   - platform: mqtt
-    name: "FishTankLights"
-    command_topic: "cmnd/fishtanklight/power"
-    state_topic: "stat/fishtanklight/POWER"
+    name: "{{ m.name }}"
+    command_topic: "cmnd/{{ m.name }}/power"
+    state_topic: "stat/{{ m.name }}/POWER"
     payload_on: "ON"
     payload_off: "OFF"
-    availability_topic: "tele/fishtanklight/LWT"
+    availability_topic: "tele/{{ m.name }}/LWT"
     payload_available: "Online"
     payload_not_available: "Offline"
     qos: 1
     retain: false
 
-  - platform: mqtt
-    name: "FishTankPower"
-    command_topic: "cmnd/fishtankpower/power"
-    state_topic: "stat/fishtankpower/POWER"
-    payload_on: "ON"
-    payload_off: "OFF"
-    availability_topic: "tele/fishtankpower/LWT"
-    payload_available: "Online"
-    payload_not_available: "Offline"
-    qos: 1
-    retain: false
-
-  - platform: mqtt
-    name: "FishFilter"
-    command_topic: "cmnd/fishfilter_93/power"
-    state_topic: "stat/fishfilter_93/POWER"
-    payload_on: "ON"
-    payload_off: "OFF"
-    availability_topic: "tele/fishfilter_93/LWT"
-    payload_available: "Online"
-    payload_not_available: "Offline"
-    qos: 1
-    retain: false
-
-  - platform: mqtt
-    name: "FishFeeder"
-    command_topic: "cmnd/fishfeeder_92/power"
-    state_topic: "stat/fishfeeder_92/POWER"
-    payload_on: "ON"
-    payload_off: "OFF"
-    availability_topic: "tele/fishfeeder_92/LWT"
-    payload_available: "Online"
-    payload_not_available: "Offline"
-    qos: 1
-    retain: false
-
-  - platform: mqtt
-    name: "Eric's FishTankPower"
-    command_topic: "cmnd/eric_fishtankpower/power"
-    state_topic: "stat/eric_fishtankpower/POWER"
-    payload_on: "ON"
-    payload_off: "OFF"
-    availability_topic: "tele/eric_fishtankpower/LWT"
-    payload_available: "Online"
-    payload_not_available: "Offline"
-    qos: 1
-    retain: false
-
-  - platform: mqtt
-    name: "Eric's FishTankLights"
-    command_topic: "cmnd/eric_fishtanklights/power"
-    state_topic: "stat/eric_fishtanklights/POWER"
-    payload_on: "ON"
-    payload_off: "OFF"
-    availability_topic: "tele/eric_fishtanklights/LWT"
-    payload_available: "Online"
-    payload_not_available: "Offline"
-    qos: 1
-    retain: false
+{% endfor %}
