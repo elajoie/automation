@@ -1,36 +1,9 @@
   - platform: mqtt
-    name: "LivingRoomLeft"
-    command_topic: "cmnd/tasmota_power2/power"
-    state_topic: "stat/tasmota_power2/POWER"
-    payload_on: "ON"
-    payload_off: "OFF"
-    value_template: "{{ value_json.POWER }}"
-    availability_topic: "tele/tasmota_power2/LWT"
-    payload_available: "Online"
-    payload_not_available: "Offline"
-    qos: 1
-    retain: false
-
-  - platform: mqtt
-    name: "AttickPower"
-    command_topic: "sonoff_power5/cmnd/power"
-    state_topic: "sonoff_power5/stat/POWER"
-    payload_on: "ON"
-    payload_off: "OFF"
-    value_template: "{{ value_json.POWER }}"
-    availability_topic: "sonoff_power5/tele/LWT"
-    payload_available: "Online"
-    payload_not_available: "Offline"
-    qos: 1
-    retain: false
-
-  - platform: mqtt
     name: "FishTankLights"
     command_topic: "sonoff_power6/cmnd/power"
     state_topic: "sonoff_power6/stat/POWER"
     payload_on: "ON"
     payload_off: "OFF"
-    value_template: "{{ value_json.POWER }}"
     availability_topic: "sonoff_power6/tele/LWT"
     payload_available: "Online"
     payload_not_available: "Offline"
@@ -43,86 +16,7 @@
     state_topic: "sonoff_power7/stat/POWER"
     payload_on: "ON"
     payload_off: "OFF"
-    value_template: "{{ value_json.POWER }}"
     availability_topic: "sonoff_power7/tele/LWT"
-    payload_available: "Online"
-    payload_not_available: "Offline"
-    qos: 1
-    retain: false
-
-  - platform: mqtt
-    name: "LaundryRoom"
-    command_topic: "sonoff_power8/cmnd/power"
-    state_topic: "sonoff_power8/stat/POWER"
-    payload_on: "ON"
-    payload_off: "OFF"
-    value_template: "{{ value_json.POWER }}"
-    availability_topic: "sonoff_power8/tele/LWT"
-    payload_available: "Online"
-    payload_not_available: "Offline"
-    qos: 1
-    retain: false
-
-  - platform: mqtt
-    name: "CharlotteGreenLight"
-    command_topic: "sonoff_power10/cmnd/power"
-    state_topic: "sonoff_power10/stat/POWER"
-    payload_on: "ON"
-    payload_off: "OFF"
-    value_template: "{{ value_json.POWER }}"
-    availability_topic: "sonoff_power10/tele/LWT"
-    payload_available: "Online"
-    payload_not_available: "Offline"
-    qos: 1
-    retain: false
-
-  - platform: mqtt
-    name: "HeidiBlueLight"
-    command_topic: "sonoff_power11/cmnd/power"
-    state_topic: "sonoff_power11/stat/POWER"
-    payload_on: "ON"
-    payload_off: "OFF"
-    value_template: "{{ value_json.POWER }}"
-    availability_topic: "sonoff_power11/tele/LWT"
-    payload_available: "Online"
-    payload_not_available: "Offline"
-    qos: 1
-    retain: false
-
-  - platform: mqtt
-    name: "EntryWhiteLight"
-    command_topic: "sonoff_power12/cmnd/power"
-    state_topic: "sonoff_power12/stat/POWER"
-    payload_on: "ON"
-    payload_off: "OFF"
-    value_template: "{{ value_json.POWER }}"
-    availability_topic: "sonoff_power12/tele/LWT"
-    payload_available: "Online"
-    payload_not_available: "Offline"
-    qos: 1
-    retain: false
-
-  - platform: mqtt
-    name: "EntryDoorLight"
-    command_topic: "cmnd/tasmota_power17/power"
-    state_topic: "stat/tasmota_power17/POWER"
-    payload_on: "ON"
-    payload_off: "OFF"
-    value_template: "{{ value_json.POWER }}"
-    availability_topic: "tele/tasmota_power17/LWT"
-    payload_available: "Online"
-    payload_not_available: "Offline"
-    qos: 1
-    retain: false
-
-  - platform: mqtt
-    name: "LivingRoomRight"
-    command_topic: "cmnd/tasmota_power18/power"
-    state_topic: "stat/tasmota_power18/POWER"
-    payload_on: "ON"
-    payload_off: "OFF"
-    value_template: "{{ value_json.POWER }}"
-    availability_topic: "tele/tasmota_power18/LWT"
     payload_available: "Online"
     payload_not_available: "Offline"
     qos: 1
@@ -134,7 +28,6 @@
     state_topic: "stat/fishfilter_93/POWER"
     payload_on: "ON"
     payload_off: "OFF"
-    value_template: "{{ value_json.POWER }}"
     availability_topic: "tele/fishfilter_93/LWT"
     payload_available: "Online"
     payload_not_available: "Offline"
@@ -147,7 +40,6 @@
     state_topic: "stat/fishfeeder_92/POWER"
     payload_on: "ON"
     payload_off: "OFF"
-    value_template: "{{ value_json.POWER }}"
     availability_topic: "tele/fishfeeder_92/LWT"
     payload_available: "Online"
     payload_not_available: "Offline"
