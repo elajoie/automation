@@ -4,8 +4,3 @@
   template:
     src: configuration.yaml.j2
     dest: /opt/homeassistant/.homeassistant/configuration.yaml
-
-- name: Template for configuration.yaml
-  template:
-    src: secrets.yaml.j2
-    dest: /opt/homeassistant/.homeassistant/secrets.yaml
