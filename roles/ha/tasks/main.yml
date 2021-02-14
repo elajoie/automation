@@ -34,13 +34,11 @@
   become: yes
   become_user: homeassistant
   become_method: sudo
-  ansible.builtin.command: "{{ item }}"
-  args:
-    chdir: /opt/homeassistant
-  with_items:
-  - 'python -m venv .'
-  - 'source bin/activate'
-  - 'pip3 install homeassistant colorlog'
+  ansible.builtin.shell: |
+    cd /opt/homeassistant
+    python -m venv .
+    source bin/activate
+    pip3 install homeassistant colorlog
 
 - name: Allow home assistant port
   firewalld:
