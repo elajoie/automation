@@ -3,7 +3,7 @@
 - include_vars: "vault"
 - name: Template for configs
   template:
-    src: "{{ item }}".j2
+    src: "{{ item }}.j2"
     dest: "/opt/homeassistant/.homeassistant/{{ item }}"
   with_items:
     - configuration.yaml
