@@ -34,7 +34,7 @@
   become: yes
   become_user: homeassistant
   become_method: sudo
-  ansible.builtin.shell: |
+  shell: |
     cd /opt/homeassistant
     python -m venv .
     source bin/activate
