@@ -45,3 +45,27 @@
     payload_not_available: "Offline"
     qos: 1
     retain: false
+
+  - platform: mqtt
+    name: "Eric's FishTankPower"
+    command_topic: "cmnd/eric_fishtankpower/power"
+    state_topic: "stat/eric_fishtankpower/POWER"
+    payload_on: "ON"
+    payload_off: "OFF"
+    availability_topic: "tele/eric_fishtankpower/LWT"
+    payload_available: "Online"
+    payload_not_available: "Offline"
+    qos: 1
+    retain: false
+
+  - platform: mqtt
+    name: "Eric's FishTankLights"
+    command_topic: "cmnd/eric_fishtanklights/power"
+    state_topic: "stat/eric_fishtanklights/POWER"
+    payload_on: "ON"
+    payload_off: "OFF"
+    availability_topic: "tele/eric_fishtanklights/LWT"
+    payload_available: "Online"
+    payload_not_available: "Offline"
+    qos: 1
+    retain: false
