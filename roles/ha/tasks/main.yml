@@ -48,7 +48,7 @@
   become_user: homeassistant
   become_method: sudo
   become_flags: '-H -s'
-  shell: source /opt/homeassistant/bin/activate
+  shell: source /opt/homeassistant/bin/activate && pip3 install homeassistant colorlog
   args:
      executable: /bin/bash
 
