@@ -1,5 +1,6 @@
 ---
 # tasks file for haConfig
+- include_vars: "vault"
 - name: Template for configuration.yaml
   template:
     src: configuration.yaml.j2
