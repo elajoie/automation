@@ -34,6 +34,7 @@
   become: yes
   become_user: homeassistant
   become_method: sudo
+  become_flags: '-H -s'
   shell: |
     cd /opt/homeassistant
     python -m venv .
