@@ -1,6 +1,6 @@
 ---
 # vars file for haConfig
-mqtt:
+device:
   - name: fishtanklight
   - name: fishtankpower
   - name: ericsfishfilter
@@ -26,3 +26,9 @@ mqtt:
   - name: outsidesouth
   - name: outsideeast
   - name: outsidewest
+
+bsensor:
+  - name: outsidePIRnorth
+  - name: outsidePIRsouth
+  - name: outsidePIReast
+  - name: outsidePIRwest

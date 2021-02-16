@@ -1,1 +1,13 @@
-[]
+{% for m in bsensor %}
+  - platform: mqtt
+    name: "{{ m.name }}"
+    state_topic: "stat/{{ m.name }}/POWER1"
+    payload_on: "ON"
+    payload_off: "OFF"
+    availability_topic: "tele/{{ m.name }}/LWT"
+    payload_available: "Online"
+    payload_not_available: "Offline"
+    device_class: motion
+    qos: 2
+
+{% endfor %}

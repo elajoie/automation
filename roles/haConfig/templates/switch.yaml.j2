@@ -1,4 +1,4 @@
-{% for m in mqtt %}
+{% for m in device %}
   - platform: mqtt
     name: "{{ m.name }}"
     command_topic: "cmnd/{{ m.name }}/power"
