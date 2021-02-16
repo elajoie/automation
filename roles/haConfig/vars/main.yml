@@ -3,7 +3,7 @@
 mqtt:
   - name: fishtanklight
   - name: fishtankpower
-  - name: fishfilter_93
+  - name: ericsfishfilter
   - name: fishfeeder_92
   - name: eric_fishtankpower
   - name: hennilight
@@ -22,3 +22,7 @@ mqtt:
   - name: whitelight
   - name: firstfloorstorage
   - name: firstfloorbathroom
+  - name: outsidenorth
+  - name: outsidesouth
+  - name: outsideeast
+  - name: outsidewest
