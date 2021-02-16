@@ -10,5 +10,9 @@
     payload_not_available: "Offline"
     qos: 1
     retain: true
+    unique_id: '%deviceid%_device'
+    device:
+      identifiers:
+        - '%deviceid%'
 
 {% endfor %}
