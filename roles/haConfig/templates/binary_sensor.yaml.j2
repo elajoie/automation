@@ -2,12 +2,17 @@
   - platform: mqtt
     name: "{{ m.name }}"
     state_topic: "stat/{{ m.name }}/MOTION"
-    payload_on: "ON"
-    payload_off: "OFF"
+    payload_on: "1"
+    payload_off: "0"
     availability_topic: "tele/{{ m.name }}/LWT"
     payload_available: "Online"
     payload_not_available: "Offline"
     device_class: motion
-    qos: 1
+    force_update: true
+    off_delay: 30
+    unique_id: '%deviceid%_motion'
+    device:
+      identifiers:
+        - '%deviceid%'
 
 {% endfor %}
