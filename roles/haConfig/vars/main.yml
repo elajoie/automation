@@ -28,7 +28,7 @@ device:
   - name: outsidewest
 
 bsensor:
-  - name: outsidePIRnorth
-  - name: outsidePIRsouth
-  - name: outsidePIReast
-  - name: outsidePIRwest
+  - name: outsidenorth
+  - name: outsidesouth
+  - name: outsideeast
+  - name: outsidewest
