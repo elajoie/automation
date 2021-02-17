@@ -6,7 +6,7 @@
     platform: state
     to: above_horizon
   action:
-  - entity_id: switch.fishtanklights
+  - entity_id: switch.fishtanklight
     service: switch.turn_on
   mode: single
 - id: '2'
@@ -17,25 +17,48 @@
     platform: state
     to: below_horizon
   action:
-  - entity_id: switch.fishtanklights
+  - entity_id: switch.fishtanklight
     service: switch.turn_off
   mode: single
 - id: '3'
   alias: Feed Fish
   trigger:
-  - at: '09:00'
+  - at: 09:00
     platform: time
   - at: '17:00'
     platform: time
   action:
-  - entity_id: switch.fishfeeder
+  - entity_id: switch.fishfeeder_92
     service: switch.turn_on
-  - entity_id: switch.fishfilter
-    service: switch.turn_off
   - delay: 00:00:02
-  - entity_id: switch.fishfeeder
+  - entity_id: switch.fishfeeder_92
     service: switch.turn_off
-  - delay: 00:05:00
-  - entity_id: switch.fishfilter
-    service: switch.turn_on
+  mode: single
+- id: 'outsidenorth'
+  alias: New Automation
+  description: ''
+  trigger:
+  - platform: state
+    entity_id: binary_sensor.outsidenorth
+  condition:
+  - condition: state
+    entity_id: sun.sun
+    state: below_horizon
+  - condition: not
+    conditions:
+    - condition: time
+      after: '22:00:00'
+      before: 06:00:00
+  action:
+  - service: switch.turn_on
+    data: {}
+    entity_id: switch.outsidenorth
+  - delay:
+      hours: 0
+      minutes: 0
+      seconds: 5
+      milliseconds: 0
+  - service: switch.turn_off
+    data: {}
+    entity_id: switch.outsidenorth
   mode: single
