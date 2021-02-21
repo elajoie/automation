@@ -3,8 +3,8 @@
 - include_vars: "vault"
 - name: Find old DBs
   find:
-    paths: /etc/Ansible
-    patterns: home-assistant_v2*
+    paths: /opt/homeassistant/.homeassistant/.storage/
+    patterns: core.*
   register: files_to_delete
 
 - name: Delete old DBs
