@@ -1,6 +1,18 @@
 ---
 # tasks file for haConfig
 - include_vars: "vault"
+- name: Find old DBs
+  find:
+    paths: /etc/Ansible
+    patterns: home-assistant_v2*
+  register: files_to_delete
+
+- name: Delete old DBs
+  file:
+    path: "{{ item.path }}"
+    state: absent
+  with_items: "{{ files_to_delete.files }}"
+
 - name: Template for configs
   template:
     src: "{{ item }}.j2"
