@@ -120,9 +120,9 @@
     event: start
   condition: []
   action:
-  {% for m in device %}
+{% for m in device %}
   - service: homeassistant.update_entity
     data: {}
     entity_id: switch.{{ m.name }}
-  {% endfor %}
+{% endfor %}
   mode: single
