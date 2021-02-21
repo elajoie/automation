@@ -84,3 +84,31 @@
   - entity_id: switch.eric_fishtanklights
     service: switch.turn_off
   mode: single
+- id: '7'
+  alias: outsideeast
+  description: ''
+  trigger:
+  - platform: state
+    entity_id: binary_sensor.outsideeast
+  condition:
+  - condition: state
+    entity_id: sun.sun
+    state: below_horizon
+  - condition: not
+    conditions:
+    - condition: time
+      after: '22:00:00'
+      before: 06:00:00
+  action:
+  - service: switch.turn_on
+    data: {}
+    entity_id: switch.outsideeast
+  - delay:
+      hours: 0
+      minutes: 1
+      seconds: 0
+      milliseconds: 0
+  - service: switch.turn_off
+    data: {}
+    entity_id: switch.outsidenorth
+  mode: single
