@@ -25,10 +25,12 @@ device:
   - name: outsidenorth
   - name: outsidesouth
   - name: outsideeast
-  - name: outsidewest
+  - name: outsidenwest
+  - name: outsideswest
 
 bsensor:
   - name: outsidenorth
   - name: outsidesouth
   - name: outsideeast
-  - name: outsidewest
+  - name: outsidenwest
+  - name: outsideswest
