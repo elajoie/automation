@@ -27,6 +27,7 @@ mqtt:
   broker: localhost
   username: client
   password: !secret mqttpassword
+  discovery: false
 
 switch: !include switch.yaml
 sensor: !include sensor.yaml
