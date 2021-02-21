@@ -112,3 +112,17 @@
     data: {}
     entity_id: switch.outsideeast
   mode: single
+- id: '8'
+  alias: Entity States
+  description: ''
+  trigger:
+  - platform: homeassistant
+    event: start
+  condition: []
+  action:
+  {% for m in device %}
+  - service: homeassistant.update_entity
+    data: {}
+    entity_id: switch.{{ m.name }}
+  {% endfor %}
+  mode: single
