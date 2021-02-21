@@ -10,9 +10,9 @@
     device_class: motion
     force_update: true
     off_delay: 30
-    unique_id: '%deviceid%_motion'
+    unique_id: '{{ m.name }}_motion'
     device:
       identifiers:
-        - '%deviceid%'
+        - '{{ m.name }}'
 
 {% endfor %}
