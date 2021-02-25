@@ -113,16 +113,30 @@
     entity_id: switch.outsideeast
   mode: single
 - id: '8'
-  alias: Entity States
+  alias: outsidenwest
   description: ''
   trigger:
-  - platform: homeassistant
-    event: start
-  condition: []
+  - platform: state
+    entity_id: binary_sensor.outsidenwest
+  condition:
+  - condition: state
+    entity_id: sun.sun
+    state: below_horizon
+  - condition: not
+    conditions:
+    - condition: time
+      after: '22:00:00'
+      before: 06:00:00
   action:
-{% for m in device %}
-  - service: homeassistant.update_entity
+  - service: switch.turn_on
     data: {}
-    entity_id: switch.{{ m.name }}
-{% endfor %}
+    entity_id: switch.outsidenwest
+  - delay:
+      hours: 0
+      minutes: 1
+      seconds: 0
+      milliseconds: 0
+  - service: switch.turn_off
+    data: {}
+    entity_id: switch.outsidenwest
   mode: single
