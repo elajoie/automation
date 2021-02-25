@@ -33,6 +33,7 @@
     name:
       - mosquitto
     state: latest
+  ignore_errors: yes
 
 - name: Allow MQTT port
   firewalld:
