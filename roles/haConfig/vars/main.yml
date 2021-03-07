@@ -34,3 +34,7 @@ bsensor:
   - name: outsideeast
   - name: outsidenwest
   - name: outsideswest
+
+doorsensor:
+  - name: frontdoorsensor
+  - name: backdoorsensor

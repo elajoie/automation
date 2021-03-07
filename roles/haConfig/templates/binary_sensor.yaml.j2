@@ -16,3 +16,21 @@
         - '{{ m.name }}'
 
 {% endfor %}
+
+{% for d in doorsensor %}
+  - platform: mqtt
+    name: "{{ d.name }}"
+    state_topic: stat/"{{ d.name }}"/OPEN
+    payload_off: 'OFF'
+    payload_on: 'ON'
+    device_class: opening
+    unique_id: '"{{ d.name }}"_contact'
+    device:
+      identifiers:
+        - '{{ d.name }}'
+      name: "{{ d.name }}"
+      manufacturer: Tasmota
+
+{% endfor %}
+
+

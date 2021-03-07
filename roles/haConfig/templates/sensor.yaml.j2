@@ -1,1 +1,12 @@
-[]
+{% for d in doorsensor %}
+  - platform: mqtt
+    name: "{{ d.name }}"
+    state_topic: stat/"{{ d.name }}"/BATT
+    unique_id: '"{{ d.name }}"_battery'
+    device:
+      identifiers:
+        - '{{ d.name }}'
+      name: "{{ d.name }}"
+      manufacturer: Tasmota
+
+{% endfor %}
