@@ -2,7 +2,7 @@
   - platform: mqtt
     name: "{{ d.name }}"
     state_topic: "stat/{{ d.name }}/BATT"
-    icon: mdi:mdi-battery
+    icon: /opt/homeassistant/.homeassistant/battery.png
     unique_id: '{{ d.name }}_battery'
     device:
       identifiers:
