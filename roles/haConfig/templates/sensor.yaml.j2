@@ -2,8 +2,7 @@
   - platform: mqtt
     name: "{{ d.name }}"
     state_topic: "stat/{{ d.name }}/BATT"
-    icon: mdi:mdi-battery
-    retain: true
+    icon: mdi:battery
     unique_id: '{{ d.name }}_battery'
     device:
       identifiers:
