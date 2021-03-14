@@ -3,7 +3,7 @@
     name: "{{ d.name }}"
     state_topic: "stat/{{ d.name }}/BATT"
     icon: mdi:mdi-battery
-    retain: ON
+    retain: true
     unique_id: '{{ d.name }}_battery'
     device:
       identifiers:
