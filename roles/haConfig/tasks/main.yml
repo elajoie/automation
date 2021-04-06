@@ -27,7 +27,7 @@
     - scripts.yaml
     - sensor.yaml
     - switch.yaml
-    - secret.yaml
+    - secrets.yaml
   ignore_errors: yes
 
 - name: Install Packages
