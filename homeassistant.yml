@@ -1,0 +1,8 @@
+---
+- hosts: all
+  roles:
+    - role: ha
+      tags: [ never, ha, homeassistant ]
+
+    - role: haConfig
+      tags: [ never, haconfig, homeassistant ]
