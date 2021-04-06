@@ -36,6 +36,11 @@
     state: latest
   ignore_errors: yes
 
+- name: Template for configs
+  template:
+    src: mosquitto.conf.j2
+    dest: "/etc/mosquitto/mosquitto.conf"
+
 - name: Allow MQTT port
   firewalld:
     port: 1883/tcp
