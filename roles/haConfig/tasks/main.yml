@@ -27,6 +27,8 @@
     - scripts.yaml
     - sensor.yaml
     - switch.yaml
+    - secret.yaml
+  ignore_errors: yes
 
 - name: Install Packages
   ansible.builtin.dnf:
