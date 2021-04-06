@@ -28,12 +28,12 @@
     - sensor.yaml
     - switch.yaml
 
-#- name: Install Packages
-#  ansible.builtin.dnf:
-#    name:
-#      - mosquitto
-#    state: latest
-#  ignore_errors: yes
+- name: Install Packages
+  ansible.builtin.dnf:
+    name:
+      - mosquitto
+    state: latest
+  ignore_errors: yes
 
 - name: Allow MQTT port
   firewalld:
