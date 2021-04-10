@@ -5,6 +5,7 @@ device:
   - name: fishtankpower
   - name: ericsfishfilter
   - name: fishfeeder_92
+  - name: ericsfishfeeder
   - name: eric_fishtankpower
   - name: hennilight
   - name: greenlight
@@ -27,6 +28,7 @@ device:
   - name: outsideeast
   - name: outsidenwest
   - name: outsideswest
+  - name: ericfishtankfilter
 
 bsensor:
   - name: outsidenorth
@@ -46,7 +48,7 @@ temp:
   - name: outsideeast
   - name: outsidenwest
   - name: outsideswest
-  - name: eric_fishtanklights
+  - name: ericfishtanklights
 
 humidity:
   - name: outsidenorth
@@ -54,4 +56,19 @@ humidity:
   - name: outsideeast
   - name: outsidenwest
   - name: outsideswest
-  - name: eric_fishtanklights
+  - name: ericfishtanklights
+
+watts:
+  - name: fishtankpower
+  - name: ericfishtankpower
+  - name: fishtanklight
+
+powerToday:
+  - name: fishtankpower
+  - name: ericfishtankpower
+  - name: fishtanklight
+
+powerYesterday:
+  - name: fishtankpower
+  - name: ericfishtankpower
+  - name: fishtanklight
