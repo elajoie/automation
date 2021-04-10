@@ -38,3 +38,20 @@ bsensor:
 doorsensor:
   - name: frontdoorsensor
   - name: backdoorsensor
+  - name: garagedoorsensor
+
+temp:
+  - name: outsidenorth
+  - name: outsidesouth
+  - name: outsideeast
+  - name: outsidenwest
+  - name: outsideswest
+  - name: eric_fishtanklights
+
+humidity:
+  - name: outsidenorth
+  - name: outsidesouth
+  - name: outsideeast
+  - name: outsidenwest
+  - name: outsideswest
+  - name: eric_fishtanklights
