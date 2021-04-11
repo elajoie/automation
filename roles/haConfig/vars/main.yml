@@ -3,15 +3,15 @@
 device:
   - name: fishtanklight
   - name: fishtankpower
-  - name: ericsfishfilter
-  - name: fishfeeder_92
+  - name: fishfilter
+  - name: fishfeeder
   - name: ericsfishfeeder
-  - name: eric_fishtankpower
+  - name: ericfishtankpower
   - name: hennilight
   - name: greenlight
   - name: kitchenwest
   - name: kitchennorth
-  - name: eric_fishtanklights
+  - name: ericfishtanklights
   - name: firstfloorhallsouth
   - name: kitchen
   - name: basementbathroom
@@ -61,14 +61,11 @@ humidity:
 watts:
   - name: fishtankpower
   - name: ericfishtankpower
-  - name: fishtanklight
 
 powerToday:
   - name: fishtankpower
   - name: ericfishtankpower
-  - name: fishtanklight
 
 powerYesterday:
   - name: fishtankpower
   - name: ericfishtankpower
-  - name: fishtanklight
