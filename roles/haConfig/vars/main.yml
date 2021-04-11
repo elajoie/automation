@@ -3,15 +3,16 @@
 device:
   - name: fishtanklight
   - name: fishtankpower
-  - name: fishfilter
-  - name: fishfeeder
-  - name: ericsfishfeeder
-  - name: ericfishtankpower
+  - name: fishtankfilter
+  - name: fishtankfeeder
+  - name: ericsfishtankfeeder
+  - name: ericsfishtankpower
+  - name: ericsfishtanklights
+  - name: ericsfishtankfilter
   - name: hennilight
   - name: greenlight
   - name: kitchenwest
   - name: kitchennorth
-  - name: ericfishtanklights
   - name: firstfloorhallsouth
   - name: kitchen
   - name: basementbathroom
@@ -28,7 +29,6 @@ device:
   - name: outsideeast
   - name: outsidenwest
   - name: outsideswest
-  - name: ericfishtankfilter
 
 bsensor:
   - name: outsidenorth
@@ -36,6 +36,11 @@ bsensor:
   - name: outsideeast
   - name: outsidenwest
   - name: outsideswest
+
+motionLights:
+  - name: outsidenorth
+  - name: outsideeast
+  - name: outsidenwest
 
 doorsensor:
   - name: frontdoorsensor
@@ -48,7 +53,7 @@ temp:
   - name: outsideeast
   - name: outsidenwest
   - name: outsideswest
-  - name: ericfishtanklights
+  - name: ericsfishtanklight
 
 humidity:
   - name: outsidenorth
@@ -56,16 +61,28 @@ humidity:
   - name: outsideeast
   - name: outsidenwest
   - name: outsideswest
-  - name: ericfishtanklights
+  - name: ericsfishtanklight
 
 watts:
-  - name: fishtankpower
-  - name: ericfishtankpower
+  - name: ericsfishtankpower
+  - name: fishtanklight
 
 powerToday:
-  - name: fishtankpower
-  - name: ericfishtankpower
+  - name: ericsfishtankpower
+  - name: fishtanklight
 
 powerYesterday:
-  - name: fishtankpower
-  - name: ericfishtankpower
+  - name: ericsfishtankpower
+  - name: fishtanklight
+
+fishTanks:
+  - name: firstFloor
+    power: fishtankpower
+    filter: fishtankfilter
+    feeder: fishtankfeeder
+    lights: fishtanklight
+  - name: erics
+    power: ericsfishtankpower
+    filter: ericsfishtankfilter
+    feeder: ericsfishtankfeeder
+    lights: ericsfishtanklight
