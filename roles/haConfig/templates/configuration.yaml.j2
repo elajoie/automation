@@ -28,3 +28,11 @@ switch: !include switch.yaml
 sensor: !include sensor.yaml
 binary_sensor: !include binary_sensor.yaml
 automation: !include automations.yaml
+stream:
+camera:
+  - platform: generic
+    name: Front Door
+    still_image_url: https://10.0.0.245/snap.jpeg
+    stream_source: rtsp://172.16.66.1:7447/vWAqQzM3Hpja4sxk
+    verify_ssl: false
+    
