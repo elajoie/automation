@@ -48,3 +48,31 @@
   mode: single
 
 {% endfor %}
+{% for m in motionLights %}
+- id: '{{ 400 + loop.index }}'
+  alias: Turn on outside light {{ m.name }}
+  trigger:
+  - platform: state
+    entity_id: binary_sensor.{{ m.name }}
+  condition:
+  - condition: state
+    entity_id: sun.sun
+    state: below_horizon
+  - condition: not
+    conditions:
+    - condition: time
+      after: '22:00:00'
+      before: '06:00:00'
+  action:
+  - service: switch.turn_on
+    entity_id: switch.{{ m.name }}
+  - delay:
+      hours: 0
+      minutes: 1
+      seconds: 0
+      milliseconds: 0
+  - service: switch.turn_off
+    entity_id: switch.{{ m.name }}
+  mode: single
+
+{% endfor %}
