@@ -7,7 +7,7 @@ device:
   - name: fishtankfeeder
   - name: ericsfishtankfeeder
   - name: ericsfishtankpower
-  - name: ericsfishtanklights
+  - name: ericsfishtanklight
   - name: ericsfishtankfilter
   - name: hennilight
   - name: greenlight
