@@ -50,8 +50,7 @@
 {% endfor %}
 {% for m in motionLights %}
 - id: '{{ 400 + loop.index }}'
-  alias: Turn on outside light whhen motion for {{ m.name }}
-  description: ''
+  alias: Turn on outside light {{ m.name }}
   trigger:
   - platform: state
     entity_id: binary_sensor.{{ m.name }}
